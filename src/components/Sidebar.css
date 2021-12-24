@@ -1,0 +1,56 @@
+.sidebar__tweet {
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 700 !important;
+    text-transform: inherit !important;
+    border-radius: 20px !important;
+    height: 50px !important;
+    margin-top: 20px !important;
+  }
+  .sidebar {
+    flex: 0.25;
+    min-width: 280px;
+    padding-top: 20px;
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+  }
+  .sidebar__twitterIcon {
+    color: var(--twitter-color);
+    font-size: 30px !important;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+.sidebar--footer {
+    display: flex;
+    color: rgb(143, 154, 163);
+    justify-content: right;
+    margin-top: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+a { 
+  color: black;
+}
+
+@media all and (max-width: 1080px) {
+  .sidebar {
+    height: 100%;
+    min-width: 0;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+}

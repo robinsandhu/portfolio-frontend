@@ -1,0 +1,25 @@
+.navmenu{
+    display: none;
+}
+
+.navmenu-icon {
+    margin: 1rem;
+}
+
+.navmenu--right {
+    margin-left: auto;
+}
+
+.navmenu--right .icon {
+    margin: 1rem;
+}
+
+@media all and (max-width: 1080px) {
+    .navmenu {
+        display: flex;
+        background-color: var(--twitter-background);
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+}

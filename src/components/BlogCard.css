@@ -1,0 +1,51 @@
+.blogcard {
+    margin: 0.3rem 0;
+}
+
+.blogcard--container {
+    display: flex;
+}
+
+.blogcard--subject {
+    overflow: hidden;
+    flex: 5;
+}
+
+.blogcard-title {
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.blogcard-desc {
+    font-size: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.blogcard--image {
+    margin-left: 1rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.blogcard--image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0.25rem;
+}
+
+.blogcard a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media all and (max-width: 727px) {
+    .blogcard-desc {
+        display: none;
+    }
+
+    .blogcard--image img {
+        width: 50px;
+        height: 50px;
+    }
+}
