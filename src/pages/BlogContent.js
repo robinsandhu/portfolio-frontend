@@ -10,16 +10,6 @@ function BlogContent({ mediumPosts, mainRef }) {
     const mediumRedirectUrl = useRef([])
 
     id = parseInt(id)
-    // const getGistUrl = async (url) => {
-    //     try{
-    //         const response = await fetch(`https://frozen-tor-98508.herokuapp.com/${url}`)
-    //         const gistUrl = response.headers.get('x-final-url')+".js"
-    //         return gistUrl
-    //     }catch(err){
-    //         console.log(err)
-    //         return ""
-    //     }
-    // }
 
     const getGistId = async (url) => {
         try{
@@ -43,9 +33,6 @@ function BlogContent({ mediumPosts, mainRef }) {
     
             let id_val = 0;
             for(const match of matches){
-                // const gistUrl = await getGistUrl(text.substring(match.index+9, match.index + 71))
-                // console.log(gistUrl)
-                // result = result.replace(match[0], `<div class="blogcontent--iframe-container"><iframe src="https://frozen-tor-98508.herokuapp.com/${text.substring(match.index+9, match.index + 66)}" class="blogcontent-iframe"></iframe></div>`)
                 mediumRedirectUrl.current.push(text.substring(match.index+9, match.index + 71))
                 result = result.replace(match[0], `<div class="blogcontent--iframe-container" id="gist_mount_${id_val++}"></div>`)
             }
@@ -56,7 +43,7 @@ function BlogContent({ mediumPosts, mainRef }) {
             mediumRedirectUrl.current.map(async (redirectUrl, index) => {
                 const gistId = await getGistId(redirectUrl)
                 // console.log(gistId, `gist_mount_${index}`)
-                ReactDOM.render(<Gist id={gistId}/>, document.getElementById(`gist_mount_${index}`))
+                ReactDOM.render(<Gist id={gistId} />, document.getElementById(`gist_mount_${index}`))
             })
         }
 
