@@ -16,7 +16,7 @@ function Main({ setIsSidebarOpen, mediumPosts, mainRef }) {
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/blog" element={<Blog mediumPosts={mediumPosts} />} />
-                <Route path="/blog/:id" element={<BlogContent mediumPosts={mediumPosts} />} />
+                <Route path="/blog/:id" element={<BlogContent mainRef={mainRef} mediumPosts={mediumPosts} />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
         </div>

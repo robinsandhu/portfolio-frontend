@@ -1,4 +1,4 @@
-.blogcontent{
+.blogcontent, .blogcontent pre{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -33,6 +33,22 @@
     /* height: 100vh; */
     /* margin: 10px 0; */
     padding: 20px 0;
+}
+
+.blogcontent--footer {
+    display: flex;
+    direction: column;
+    font-size: 0.7rem;
+}
+
+.blogcontent--footer-right {
+    flex: 0.3;
+    margin-left: auto;
+    text-align: end;
+}
+
+.blogcontent--footer-left {
+    flex: 0.3;
 }
 
 .blogcontent--iframe-container {
