@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "./Sidebar.css";
 import SidebarOption from "./SidebarOption";
 
-function Sidebar({ isSidebarOpen }) {
+function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
     const [ activeList, setActiveList ] = useState([false, false, false, false, false])
     
     useEffect(() => {
@@ -38,6 +38,7 @@ function Sidebar({ isSidebarOpen }) {
         let newList = [false, false, false, false, false]
         newList[index] = true
         setActiveList(newList)
+        setIsSidebarOpen(false)
     }
 
     return (

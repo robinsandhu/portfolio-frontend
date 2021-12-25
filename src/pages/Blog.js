@@ -4,11 +4,13 @@ import './Blog.css'
 
 function Blog({ mediumPosts }) {
     return (
-        <div className='nes-container with-title blogs'>
-            <p className='title'>My Blogs</p>
-            {
-                mediumPosts.map((item, idx) => <BlogCard key={idx} item={item} index={idx}/>)
-            }
+        <div className='blogs'>  
+            <div className='nes-container with-title blogs-container'>
+                <p className='title'>Blog Posts</p>
+                {
+                    mediumPosts.map((item, idx) => <BlogCard key={idx} item={item} index={idx}/>)
+                }
+            </div>
         </div>
     )
 }

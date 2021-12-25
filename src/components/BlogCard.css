@@ -1,5 +1,5 @@
 .blogcard {
-    margin: 0.3rem 0;
+    margin: 0.8rem 0;
 }
 
 .blogcard--container {
@@ -7,18 +7,26 @@
 }
 
 .blogcard--subject {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     flex: 5;
 }
 
-.blogcard-title {
+.blogcard--subject-title {
     font-size: 0.9rem;
     flex-wrap: wrap;
 }
 
-.blogcard-desc {
+.blogcard--subject-desc {
     font-size: 0.6rem;
     flex-wrap: wrap;
+}
+
+.blogcard--subject-pubdate {
+    font-size: 0.8rem;
+    margin-top: auto;
+    font-family: 'Lora', serif;
 }
 
 .blogcard--image {
@@ -40,12 +48,12 @@
 }
 
 @media all and (max-width: 727px) {
-    .blogcard-desc {
+    .blogcard--subject-desc {
         display: none;
     }
 
     .blogcard--image img {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
     }
 }

@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import Gist from 'react-gist'
 import ReactDOM from 'react-dom';
 import './BlogContent.css'
+import LinkIcon from '@mui/icons-material/Link';
 
 function BlogContent({ mediumPosts, mainRef }) {
     let { id } = useParams()
@@ -10,7 +11,7 @@ function BlogContent({ mediumPosts, mainRef }) {
     const mediumRedirectUrl = useRef([])
 
     id = parseInt(id)
-
+    console.log(mediumPosts[id])
     const getGistId = async (url) => {
         try{
             const response = await fetch(`https://frozen-tor-98508.herokuapp.com/${url}`)
@@ -51,17 +52,46 @@ function BlogContent({ mediumPosts, mainRef }) {
     }, [mediumPosts, id])
 
     return (
-        <div className='nes-container with-title'>
-            <p className="title">{mediumPosts.length && mediumPosts[id] && mediumPosts[id].title}</p>
+        <div className='nes-container with-title blogcontainer'>
+            <p className="title">
+                {mediumPosts.length && mediumPosts[id] && mediumPosts[id].title}
+                <a target="_blank" href={mediumPosts[id].link}>
+                    <LinkIcon />
+                </a>
+            </p>
             <div className='blogcontent' dangerouslySetInnerHTML={{__html: parsedPost}}>
             </div>
-            <hr />
             <div className='blogcontent--footer'>
-                <div className='blogcontent--footer-left'>
-                    {id-1 > -1 ? <Link to={`/blog/${id-1}`}>{mediumPosts.length && mediumPosts[id] && mediumPosts[id-1].title}</Link> : <p>Start</p>}
-                </div>
-                <div className='blogcontent--footer-right'>
-                    {id+1 < mediumPosts.length ? <Link to={`/blog/${id+1}`}>{mediumPosts.length && mediumPosts[id] && mediumPosts[id+1].title}</Link> : <p>End</p>}
+                <hr />
+                <div className='blogcontent--footer-nav'>
+                    <div className='blogcontent--footer-left'>
+                        {
+                            id-1 > -1 ?
+                            <>
+                                <p>Next</p>
+                                <Link to={`/blog/${id-1}`}>{mediumPosts.length && mediumPosts[id] && mediumPosts[id-1].title}</Link> 
+                            </>
+                            : 
+                            <>
+                                <p>Next</p>
+                                <p>No newer posts</p>
+                            </>
+                        }
+                    </div>
+                    <div className='blogcontent--footer-right'>
+                        {
+                            id+1 < mediumPosts.length ? 
+                            <>
+                                <p>Prev</p>
+                                <Link to={`/blog/${id+1}`}>{mediumPosts.length && mediumPosts[id] && mediumPosts[id+1].title}</Link> 
+                            </>
+                            : 
+                            <>
+                                <p>Prev</p>
+                                <p>Start</p>
+                            </>
+                        }
+                    </div>
                 </div>
             </div>
         </div>

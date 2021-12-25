@@ -3,6 +3,13 @@
     flex-direction: column;
     gap: 0.4rem;
     font-family: 'Lora', serif;
+    /* min-height: 100vh; */
+}
+
+.blogcontainer {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .blogcontent blockquote {
@@ -68,8 +75,18 @@
 
 .blogcontent--footer {
     display: flex;
-    direction: column;
+    flex-direction: column;
     font-size: 0.7rem;
+    margin-top: auto;
+}
+
+.blogcontent--footer a {
+    text-decoration: underline;
+}
+
+.blogcontent--footer-nav {
+    display: flex;
+    flex-direction: row;
 }
 
 .blogcontent--footer-right {

@@ -10,7 +10,7 @@ import axios from 'axios'
 // mode
 // 0 - light mode
 // 1 - dark mode
-const feedUrl = "https://medium.com/feed/@koheiarai94"
+const feedUrl = "https://medium.com/feed/@robin-sandhu"
 
 function App() {
   const location = useLocation()
@@ -60,7 +60,7 @@ function App() {
     <React.Fragment>
       <Navbar toggleDisplayMode={toggleDisplayMode} setIsSidebarOpen={setIsSidebarOpen} />
       <div className="app">
-        <Sidebar isSidebarOpen={isSidebarOpen} />
+        <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
         <Main setIsSidebarOpen={setIsSidebarOpen} mediumPosts={mediumPosts} mainRef={mainRef} />
         <Widgets toggleDisplayMode={toggleDisplayMode} randomQuote={randomQuotes.length !==0 && randomQuotes[quoteIndex]} mainRef={mainRef} musicList={musicList}/>
       </div>
