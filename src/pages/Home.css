@@ -1,0 +1,39 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.home-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.home-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 0;
+    flex: 0.2;
+}
+
+.home-image img {
+    /* width: 400px; */
+    height: auto;
+    border-radius: 150px;
+    transition: width 0.5s;
+}
+
+.home-content {
+    flex: 0.5;
+    order: 1;
+}
+
+@media all and (max-width: 727px) {
+    .home-image img {
+        transition: width 0.8s;
+    }
+}

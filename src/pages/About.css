@@ -1,0 +1,47 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: 'Lora', serif;
+}
+
+.about-container {
+    flex: 1;
+}
+
+.time-span {
+    font-size: 1rem;
+    float: right;
+}
+
+.about-section-heading {
+    text-decoration: underline;
+}
+/* 
+.about-container p {
+    font-size: 0.5rem;
+}
+
+.about-container h6 {
+    font-size: 1rem;
+}
+
+.about-container h5 {
+    font-size: 1.1rem;
+}
+
+.about-container h4 {
+    font-size: 1.2rem;
+}
+
+.about-container h3 {
+    font-size: 1.3rem;
+}
+
+.about-container h2 {
+    font-size: 1.4rem;
+}
+
+.about-container h1 {
+    font-size: 1.5rem;
+} */

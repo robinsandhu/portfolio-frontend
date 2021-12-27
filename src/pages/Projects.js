@@ -7,9 +7,6 @@ function Projects() {
         <div className='projects'>
             <div className='nes-container with-title projects-container'>
                 <p className='title'>My Projects</p>
-                {
-                    
-                }
             </div>
         </div>
     )

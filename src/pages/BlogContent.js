@@ -88,7 +88,7 @@ function BlogContent({ mediumPosts, mainRef }) {
                             : 
                             <>
                                 <p>Prev</p>
-                                <p>Start</p>
+                                <p>No previous posts</p>
                             </>
                         }
                     </div>

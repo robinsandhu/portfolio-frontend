@@ -36,17 +36,23 @@
 
 .quote p {
     font-size: 0.7rem;
+    margin-bottom: 5px;
 }
 
 .head {
     align-self: flex-end;
     margin-right: 10px;
 }
-/* .icon:hover {
-    cursor: 
-} */
+.icon:hover {
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAA…BeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC");
+}
 .icon {
     margin: 2px 0;
+}
+
+.xyz:hover {
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAA…BeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC");
+
 }
 
 @media all and (max-width: 1080px) {

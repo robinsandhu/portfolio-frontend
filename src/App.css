@@ -8,6 +8,10 @@ body {
     height: 100vh;
 }
 
+.nes-container {
+    border-radius: 10px;
+}
+
 @media all and (max-width: 1080px) {
     .app{
         padding-top: 3.2rem;
