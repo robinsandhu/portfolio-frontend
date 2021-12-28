@@ -99,6 +99,16 @@
     flex: 0.3;
 }
 
+.blogcontent--iframe-container {
+    display: flex;
+    justify-content: center;
+}
+
+.blogcontent--iframe-container div {
+    flex: 0.7;
+    min-width: 300px;
+}
+
 .blogcontent--iframe-container iframe {
     width: 100%;
     line-height: 0;

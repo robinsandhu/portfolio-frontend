@@ -24,9 +24,10 @@
 }
 
 .blogcard--subject-pubdate {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     margin-top: auto;
-    font-family: 'Lora', serif;
+    /* font-weight: 200; */
+    /* font-family: 'Lora', serif; */
 }
 
 .blogcard--image {
