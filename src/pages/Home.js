@@ -11,7 +11,7 @@ function Home() {
         <div className='home'>
             <div className='nes-container home-container'>
                 <div className="home-image">
-                    <img style={{width: imgWidth}} src="/tmp/redditAvatar.png" />
+                    <img style={{width: imgWidth}} src="/images/redditAvatar.png" />
                 </div>
                 <div className='home-content'>
                     <p>
