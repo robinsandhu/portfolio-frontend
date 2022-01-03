@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Contact.css'
 
-function Contact() {
+function Contact({ displayMode }) {
     const [ name, setName ] = useState("")
     const [ email, setEmail ] = useState("")
     const [ message, setMessage ] = useState("")
@@ -14,11 +14,11 @@ function Contact() {
 
     return (
         <div className="contact">
-            <div className='nes-container with-title is-centered'>
+            <div className={`nes-container with-title is-centered ${ displayMode ? "is-dark" : "" }`}>
                 <p className="title">Contact Me</p>
                 <div>
                     <form onSubmit={handleSubmit}>
-                        <div className="nes-balloon from-left">
+                        <div className={`nes-balloon from-left ${ displayMode ? "is-dark" : "" }`}>
                             <legend className='contact-message'>
                                 Send a message or link on social media
                             </legend>
@@ -26,17 +26,17 @@ function Contact() {
 
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" value={name} onChange={e => setName(e.target.value)} className="nes-input" placeholder="Your Name" required/>
+                            <input type="text" id="name" value={name} onChange={e => setName(e.target.value)} className={`nes-input ${ displayMode ? "is-dark" : "" }`} placeholder="Your Name" required/>
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
-                            <input type="text" id="email" value={email} onChange={e => setEmail(e.target.value)} className="nes-input" placeholder="Your E-mail" required/>
+                            <input type="text" id="email" value={email} onChange={e => setEmail(e.target.value)} className={`nes-input ${ displayMode ? "is-dark" : "" }`} placeholder="Your E-mail" required/>
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="message">Your Message</label>
-                            <textarea rows="5" type="text" id="message" value={message} onChange={e => setMessage(e.target.value)} className="nes-input" placeholder="Please enter your message" required/>
+                            <textarea rows="5" type="text" id="message" value={message} onChange={e => setMessage(e.target.value)} className={`nes-input ${ displayMode ? "is-dark" : "" }`} placeholder="Please enter your message" required/>
                         </div>
                         
                         <div className="form-group">
@@ -46,7 +46,7 @@ function Contact() {
                 </div>
             </div>
             <section className="icon-list">
-                <div className="nes-container with-title is-centered">
+                <div className={`nes-container with-title is-centered ${ displayMode ? "is-dark" : "" }`}>
                     <p className="title">Social Media</p>
                     <div className="contact-icons">
                         <a target="_blank" href="https://twitter.com/rob6x9n">

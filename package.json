@@ -18,7 +18,6 @@
     "react-gist": "^1.2.4",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
-    "react-scroll-to": "^3.0.0-beta.6",
     "react-twitter-embed": "^3.0.3",
     "web-vitals": "^2.1.2"
   },

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './BlogCard.css'
 
-function BlogCard({ item, index }) {
+function BlogCard({ item, index, displayMode }) {
     let startIdx = item && item.description.indexOf('<p>')
     let endIdx = -1
     if(startIdx !== -1)
@@ -14,7 +14,7 @@ function BlogCard({ item, index }) {
 
     return (
         <div className='blogcard'>
-            <div className='nes-container is-rounded'>
+            <div className={`nes-container is-rounded ${displayMode ? "is-dark" : ""}`}>
                 <Link to={`/blog/${index}`}>
                     <div className='blogcard--container'>
                         <div className='blogcard--subject'>

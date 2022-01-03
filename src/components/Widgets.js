@@ -6,12 +6,16 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import SpotifyCard from "./SpotifyCard";
 import { Link } from 'react-router-dom'
 
-function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList }) {
+function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMode }) {
+    let style = {
+        backgroundColor: "rgb(54, 57, 63)"
+    }
+
     return (
-        <div className="widgets">
+        <div className="widgets" style={displayMode ? style : {}}>
             <div className="widgets--widgetContainer">
                 <Routes>
-                    <Route path="/" element={<SpotifyCard musicList={musicList} />} />
+                    <Route path="/" element={<SpotifyCard musicList={musicList} displayMode={displayMode} />} />
                     <Route path="/about" element={<React.Fragment />} />
                     <Route path="/projects" element={<React.Fragment />} />
                     <Route path="/blog" element={<React.Fragment />} />
@@ -20,7 +24,7 @@ function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList }) {
                 </Routes>
             </div>
             <div className="widgets--footer">
-                <div className="nes-balloon from-right quote">
+                <div className={`nes-balloon from-right quote ${displayMode ? "is-dark" : ""}`}>
                     <div>
                         <p>
                             "{randomQuote && randomQuote.content}"
@@ -32,10 +36,10 @@ function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList }) {
                 </div>
                 <i className="nes-bcrikko head"></i>
                 <div>
-                    <a><KeyboardArrowUpIcon className="icon" onClick={() => {mainRef.current.scrollTo({top: 0, left: 0, behavior: "smooth"})}}/></a>
+                    <a><KeyboardArrowUpIcon className="icon" style={displayMode ? { color:"white" } : {}} onClick={() => {mainRef.current.scrollTo({top: 0, left: 0, behavior: "smooth"})}}/></a>
                 </div>
                 <div>
-                    <a><LightModeIcon className="icon" onClick={toggleDisplayMode} /></a>
+                    <a><LightModeIcon className="icon" style={displayMode ? { color:"white" } : {}} onClick={toggleDisplayMode} /></a>
                 </div>
             </div>
         </div>

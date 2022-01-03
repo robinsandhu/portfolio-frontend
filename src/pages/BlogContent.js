@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import './BlogContent.css'
 import LinkIcon from '@mui/icons-material/Link';
 import { TwitterTweetEmbed } from 'react-twitter-embed'
-function BlogContent({ mediumPosts, mainRef }) {
+function BlogContent({ mediumPosts, mainRef, displayMode }) {
     let { id } = useParams()
     const [ parsedPost, setParsedPost ] = useState("")
     const mediumGistRedirectUrl = useRef([])
@@ -77,11 +77,11 @@ function BlogContent({ mediumPosts, mainRef }) {
     }, [parsedPost])
 
     return (
-        <div className='nes-container with-title blogcontainer'>
+        <div className={`nes-container with-title blogcontainer ${ displayMode ? "is-dark" : "" }`}>
             <p className="title">
                 {mediumPosts.length && mediumPosts[id] && mediumPosts[id].title}
                 <a target="_blank" href={mediumPosts.length && mediumPosts[id] && mediumPosts[id].link}>
-                    <LinkIcon style={{margin: "7px"}} />
+                    <LinkIcon style={ displayMode ? {margin: "7px", color: "white"} : {margin: "7px"}} />
                 </a>
             </p>
             <div className='blogcontent' dangerouslySetInnerHTML={{__html: parsedPost}}>

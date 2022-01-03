@@ -3,12 +3,12 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import ReorderIcon from '@mui/icons-material/Reorder';
 import './Navbar.css'
 
-function Navbar({toggleDisplayMode, setIsSidebarOpen}) {
+function Navbar({ toggleDisplayMode, setIsSidebarOpen, displayMode }) {
     return (
-        <div className='navmenu'>
-            <ReorderIcon className="navmenu-icon" onClick={() => {setIsSidebarOpen(prevState => !prevState)}} />
+        <div className='navmenu' style={ displayMode ? { backgroundColor: "rgb(54, 57, 63)" } : {} }>
+            <ReorderIcon className="navmenu-icon" style={displayMode ? { color:"white" } : {}} onClick={() => {setIsSidebarOpen(prevState => !prevState)}} />
             <div className="navmenu--right">
-                <LightModeIcon className="icon" onClick={toggleDisplayMode} />
+                <LightModeIcon className="icon" style={displayMode ? { color:"white" } : {}} onClick={toggleDisplayMode} />
             </div>
         </div>
     )

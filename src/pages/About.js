@@ -1,10 +1,10 @@
 import React from 'react'
 import './About.css'
 
-function About() {
+function About({ displayMode }) {
     return (
         <div className="about">
-            <div className='nes-container with-title about-container'>
+            <div className={`nes-container with-title about-container ${displayMode ? "is-dark" : ""}`}>
                 <p className='title'>
                     <i className="nes-icon is-small heart"></i>
                     About Me

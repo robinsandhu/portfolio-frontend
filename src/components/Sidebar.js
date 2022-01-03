@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "./Sidebar.css";
 import SidebarOption from "./SidebarOption";
 
-function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
+function Sidebar({ isSidebarOpen, setIsSidebarOpen, displayMode }) {
     const [ activeList, setActiveList ] = useState([false, false, false, false, false])
     
     useEffect(() => {
@@ -41,21 +41,35 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
         setIsSidebarOpen(false)
     }
 
+    let style = displayMode ?
+    {
+        backgroundColor: "rgb(54, 57, 63)"
+    }
+    :
+    {}
+
+    let linkStyle = {
+        textDecoration: "none"
+    }
+    if(displayMode){
+        linkStyle.color = "white"
+    }
+
     return (
-        <div className="sidebar" style={isSidebarOpen ? {width: "280px"} : {}}>
-            <Link to="/" style={{textDecoration: "none"}} onClick={() => {handleClick(0)}}>
+        <div className="sidebar" style={isSidebarOpen ? {...style, width: "266px"} : {...style}}>
+            <Link to="/" style={linkStyle} onClick={() => {handleClick(0)}}>
                 <SidebarOption text="Robin Sandhu" handle="@rob6x9n" active={activeList[0]} />
             </Link>
-            <Link to="/about" style={{textDecoration: "none"}} onClick={() => {handleClick(1)}}>
+            <Link to="/about" style={linkStyle} onClick={() => {handleClick(1)}}>
                 <SidebarOption text="About" active={activeList[1]} />
             </Link>
-            <Link to="/projects" style={{textDecoration: "none"}} onClick={() => {handleClick(2)}}>
+            <Link to="/projects" style={linkStyle} onClick={() => {handleClick(2)}}>
                 <SidebarOption text="Projects" active={activeList[2]} />
             </Link>
-            <Link to="/blog" style={{textDecoration: "none"}} onClick={() => {handleClick(3)}}>
+            <Link to="/blog" style={linkStyle} onClick={() => {handleClick(3)}}>
                 <SidebarOption text="Blog" active={activeList[3]} />
             </Link>
-            <Link to="/contact" style={{textDecoration: "none"}} onClick={() => {handleClick(4)}}>
+            <Link to="/contact" style={linkStyle} onClick={() => {handleClick(4)}}>
                 <SidebarOption text="Contact" active={activeList[4]} />
             </Link>
             <div className="sidebar--footer">

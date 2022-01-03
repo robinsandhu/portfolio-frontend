@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './Home.css'
 
-function Home() {
-    const [ imgWidth, setImgWidth ] = useState("400px")    
+function Home({ displayMode }) {
+    const [ imgWidth, setImgWidth ] = useState("320px")    
     useEffect(() => {
-        setImgWidth("300px")
+        setImgWidth("266px")
     }, [])
 
     return (
         <div className='home'>
-            <div className='nes-container home-container'>
+            <div className={`nes-container home-container ${displayMode ? "is-dark" : ""}`}>
                 <div className="home-image">
                     <img style={{width: imgWidth}} src="/images/redditAvatar.PNG" />
                 </div>

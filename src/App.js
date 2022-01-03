@@ -32,7 +32,7 @@ function App() {
 
   const toggleDisplayMode = () => {
     // console.log("Click!")
-    alert("Under Construction!")
+    // alert("Under Construction!")
     setDisplayMode(prevState => !prevState)
   }
 
@@ -58,11 +58,11 @@ function App() {
 
   return (
     <React.Fragment>
-      <Navbar toggleDisplayMode={toggleDisplayMode} setIsSidebarOpen={setIsSidebarOpen} />
+      <Navbar toggleDisplayMode={toggleDisplayMode} setIsSidebarOpen={setIsSidebarOpen} displayMode={displayMode} />
       <div className="app">
-        <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
-        <Main setIsSidebarOpen={setIsSidebarOpen} mediumPosts={mediumPosts} mainRef={mainRef} />
-        <Widgets toggleDisplayMode={toggleDisplayMode} randomQuote={randomQuotes.length !==0 && randomQuotes[quoteIndex]} mainRef={mainRef} musicList={musicList}/>
+        <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} displayMode={displayMode} />
+        <Main setIsSidebarOpen={setIsSidebarOpen} mediumPosts={mediumPosts} mainRef={mainRef} displayMode={displayMode} />
+        <Widgets toggleDisplayMode={toggleDisplayMode} randomQuote={randomQuotes.length !==0 && randomQuotes[quoteIndex]} mainRef={mainRef} musicList={musicList} displayMode={displayMode} />
       </div>
     </React.Fragment>
   );
