@@ -41,7 +41,7 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen, displayMode }) {
         setIsSidebarOpen(false)
     }
 
-    let style = displayMode ?
+    let style = displayMode === true ?
     {
         backgroundColor: "rgb(54, 57, 63)"
     }
@@ -51,7 +51,7 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen, displayMode }) {
     let linkStyle = {
         textDecoration: "none"
     }
-    if(displayMode){
+    if(displayMode === true){
         linkStyle.color = "white"
     }
 

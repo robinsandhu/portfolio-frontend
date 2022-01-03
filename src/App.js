@@ -15,7 +15,7 @@ const feedUrl = "https://medium.com/feed/@robin-sandhu"
 function App() {
   const location = useLocation()
 
-  const [ displayMode, setDisplayMode ] = useState(0);
+  const [ displayMode, setDisplayMode ] = useState(false);
   const [ isSidebarOpen, setIsSidebarOpen ] = useState(false)
   const [ randomQuotes, setRandomQuotes ] = useState([])
   const [ mediumPosts, setMediumPosts ] = useState([])
@@ -25,15 +25,19 @@ function App() {
   const mainRef = useRef()
 
   useEffect(() => {
+      let darkModeInitVal = localStorage.getItem('robinDarkMode')
+      if(darkModeInitVal !== null)
+        setDisplayMode(darkModeInitVal === 'true')
       axios.get("https://dry-crag-29825.herokuapp.com/api/songs/top-tracks").then(response => {
           setMusicList(response.data.slice(0, 4))
       })
   }, [])
 
   const toggleDisplayMode = () => {
-    // console.log("Click!")
-    // alert("Under Construction!")
-    setDisplayMode(prevState => !prevState)
+    setDisplayMode(prevState => {
+      localStorage.setItem('robinDarkMode', !prevState)
+      return !prevState
+    })
   }
 
   useEffect(() => {

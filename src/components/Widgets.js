@@ -12,7 +12,7 @@ function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMo
     }
 
     return (
-        <div className="widgets" style={displayMode ? style : {}}>
+        <div className="widgets" style={displayMode === true ? style : {}}>
             <div className="widgets--widgetContainer">
                 <Routes>
                     <Route path="/" element={<SpotifyCard musicList={musicList} displayMode={displayMode} />} />
@@ -24,7 +24,7 @@ function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMo
                 </Routes>
             </div>
             <div className="widgets--footer">
-                <div className={`nes-balloon from-right quote ${displayMode ? "is-dark" : ""}`}>
+                <div className={`nes-balloon from-right quote ${displayMode === true ? "is-dark" : ""}`}>
                     <div>
                         <p>
                             "{randomQuote && randomQuote.content}"
@@ -36,10 +36,10 @@ function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMo
                 </div>
                 <i className="nes-bcrikko head"></i>
                 <div>
-                    <a><KeyboardArrowUpIcon className="icon" style={displayMode ? { color:"white" } : {}} onClick={() => {mainRef.current.scrollTo({top: 0, left: 0, behavior: "smooth"})}}/></a>
+                    <a><KeyboardArrowUpIcon className="icon" style={displayMode === true ? { color:"white" } : {}} onClick={() => {mainRef.current.scrollTo({top: 0, left: 0, behavior: "smooth"})}}/></a>
                 </div>
                 <div>
-                    <a><LightModeIcon className="icon" style={displayMode ? { color:"white" } : {}} onClick={toggleDisplayMode} /></a>
+                    <a><LightModeIcon className="icon" style={displayMode === true ? { color:"white" } : {}} onClick={toggleDisplayMode} /></a>
                 </div>
             </div>
         </div>
