@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import { useLocation } from 'react-router-dom'
 import './App.css'
 import axios from 'axios'
+import Cookies from 'js-cookie'
 
 // mode
 // 0 - light mode
@@ -25,8 +26,8 @@ function App() {
   const mainRef = useRef()
 
   useEffect(() => {
-      let darkModeInitVal = localStorage.getItem('robinDarkMode')
-      if(darkModeInitVal !== null)
+      const darkModeInitVal = Cookies.get('dark');
+      if(darkModeInitVal)
         setDisplayMode(darkModeInitVal === 'true')
       axios.get("https://dry-crag-29825.herokuapp.com/api/songs/top-tracks").then(response => {
           setMusicList(response.data.slice(0, 4))
@@ -36,6 +37,7 @@ function App() {
   const toggleDisplayMode = () => {
     setDisplayMode(prevState => {
       localStorage.setItem('robinDarkMode', !prevState)
+      document.cookie = `dark=${!prevState}`
       return !prevState
     })
   }

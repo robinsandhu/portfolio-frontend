@@ -11,7 +11,7 @@ function Home({ displayMode }) {
         <div className='home'>
             <div className={`nes-container home-container ${displayMode ? "is-dark" : ""}`}>
                 <div className="home-image">
-                    <img style={{width: imgWidth}} src="/images/redditAvatar.PNG" />
+                    <img style={{width: imgWidth}} src="/images/redditAvatar1.PNG" />
                 </div>
                 <div className='home-content'>
                     <p>
