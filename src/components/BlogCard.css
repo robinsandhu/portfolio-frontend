@@ -19,7 +19,8 @@
 }
 
 .blogcard--subject-desc {
-    font-size: 0.6rem;
+    font-family: 'Lora', serif;
+    font-size: 0.9rem;
     flex-wrap: wrap;
 }
 

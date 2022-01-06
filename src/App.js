@@ -36,8 +36,7 @@ function App() {
 
   const toggleDisplayMode = () => {
     setDisplayMode(prevState => {
-      localStorage.setItem('robinDarkMode', !prevState)
-      document.cookie = `dark=${!prevState}`
+      Cookies.set('dark', !prevState)
       return !prevState
     })
   }

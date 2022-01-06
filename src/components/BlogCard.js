@@ -9,12 +9,12 @@ function BlogCard({ item, index, displayMode }) {
         endIdx = item && item.description.substring(startIdx+3).indexOf('</p>')
     let trimmedDesc = ""
     if(startIdx !== -1 && endIdx !== -1){
-        trimmedDesc = item.description.substring(startIdx+3, Math.min(endIdx, 200))
+        trimmedDesc = item.description.substring(startIdx+3, Math.min(endIdx, 244))
     }
 
     return (
         <div className='blogcard'>
-            <div className={`nes-container is-rounded ${displayMode ? "is-dark" : ""}`}>
+            <div className={`nes-container is-rounded with-title ${displayMode ? "is-dark" : ""}`}>
                 <Link to={`/blog/${index}`}>
                     <div className='blogcard--container'>
                         <div className='blogcard--subject'>
