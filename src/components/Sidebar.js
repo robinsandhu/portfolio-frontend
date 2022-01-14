@@ -73,7 +73,7 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen, displayMode }) {
                 <SidebarOption text="Contact" active={activeList[4]} />
             </Link>
             <div className="sidebar--footer">
-                <small>&copy; 2021 robin</small>
+                <small>&copy; {new Date().getFullYear()} Robin Sandhu</small>
             </div>
         </div>
     );

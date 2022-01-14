@@ -15,7 +15,7 @@ function Home({ displayMode }) {
                 </div>
                 <div className='home-content'>
                     <h5>
-                        Hi this is Robin and again some lorem ipsum text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        Hi, I'm Robin Sandhu a beginner software developer. I enjoy building applications and learning about software development in general. I also have a huge interest in cyber security, so I like to try my hands in this field whenever I get a chance. This website is a small collection of my project work, work experience and blog posts. To know more about me check out the About page.
                     </h5>
                 </div>
             </div>

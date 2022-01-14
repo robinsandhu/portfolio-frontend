@@ -9,6 +9,10 @@ body {
 }
 
 .nes-container {
+    padding: 1.2rem;
+}
+
+.nes-container {
     border-radius: 10px;
 }
 

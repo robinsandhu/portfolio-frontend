@@ -1,0 +1,17 @@
+.projectcard {
+    margin: 15px 0;
+}
+
+.projectcard-content {
+    font-family: 'Lora', serif;
+}
+
+.projectcard-content--footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.projectcard-content--footer a {
+    margin: 0 100px;
+}

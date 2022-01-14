@@ -4,7 +4,7 @@ import './Blog.css'
 
 function Blog({ mediumPosts, displayMode }) {
     return (
-        <div className='blogs'>  
+        <div className='blogs'>
             <div className={`nes-container with-title blogs-container ${displayMode ? "is-dark" : ""}`}>
                 <p className='title'>Blog Posts</p>
                 {

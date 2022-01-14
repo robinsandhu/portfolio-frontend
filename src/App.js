@@ -16,7 +16,7 @@ const feedUrl = "https://medium.com/feed/@robin-sandhu"
 function App() {
   const location = useLocation()
 
-  const [ displayMode, setDisplayMode ] = useState(false);
+  const [ displayMode, setDisplayMode ] = useState(true);
   const [ isSidebarOpen, setIsSidebarOpen ] = useState(false)
   const [ randomQuotes, setRandomQuotes ] = useState([])
   const [ mediumPosts, setMediumPosts ] = useState([])
@@ -24,7 +24,8 @@ function App() {
   const [ quoteIndex, setQuoteIndex ] = useState(0)
   
   const mainRef = useRef()
-
+  const prevLocation = useRef("");
+  
   useEffect(() => {
       const darkModeInitVal = Cookies.get('dark');
       if(darkModeInitVal)
@@ -57,8 +58,10 @@ function App() {
 
   useEffect(() => {
     let quoteCount = randomQuotes.length
-    if(quoteCount !== 0)
-    setQuoteIndex(prevState => (prevState+1)%quoteCount)
+    if(quoteCount !== 0 && prevLocation.current !== location.pathname){
+      prevLocation.current = location.pathname
+      setQuoteIndex(prevState => (prevState+1)%quoteCount)
+    }
   }, [location])
 
   return (

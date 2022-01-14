@@ -21,6 +21,10 @@
 .about-section-heading {
     text-decoration: underline;
 }
+
+.about-section-content {
+    margin-left: 10px;
+}
 /* 
 .about-container p {
     font-size: 0.5rem;

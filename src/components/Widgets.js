@@ -39,7 +39,7 @@ function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMo
                     <a title="Back to Top"><KeyboardArrowUpIcon className="icon" style={displayMode === true ? { color:"white" } : {}} onClick={() => {mainRef.current.scrollTo({top: 0, left: 0, behavior: "smooth"})}}/></a>
                 </div>
                 <div>
-                    <a><LightModeIcon className="icon" style={displayMode === true ? { color:"white" } : {}} onClick={toggleDisplayMode} /></a>
+                    <a title="Toggle Dark Mode"><LightModeIcon className="icon" style={displayMode === true ? { color:"white" } : {}} onClick={toggleDisplayMode} /></a>
                 </div>
             </div>
         </div>
