@@ -31,7 +31,7 @@ function App() {
       if(darkModeInitVal)
         setDisplayMode(darkModeInitVal === 'true')
       axios.get("https://dry-crag-29825.herokuapp.com/api/songs/top-tracks").then(response => {
-          setMusicList(response.data.slice(0, 4))
+          setMusicList(response.data.slice(0, 3))
       })
   }, [])
 
@@ -70,7 +70,7 @@ function App() {
       <div className="app">
         <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} displayMode={displayMode} />
         <Main setIsSidebarOpen={setIsSidebarOpen} mediumPosts={mediumPosts} mainRef={mainRef} displayMode={displayMode} />
-        <Widgets toggleDisplayMode={toggleDisplayMode} randomQuote={randomQuotes.length !==0 && randomQuotes[quoteIndex]} mainRef={mainRef} musicList={musicList} displayMode={displayMode} />
+        <Widgets toggleDisplayMode={toggleDisplayMode} mediumPosts={mediumPosts} randomQuote={randomQuotes.length !==0 && randomQuotes[quoteIndex]} mainRef={mainRef} musicList={musicList} displayMode={displayMode} />
       </div>
     </React.Fragment>
   );

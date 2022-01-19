@@ -14,6 +14,7 @@ function Projects({ displayMode }) {
                     gitLink="https://github.com/robinsandhu/DoublePendulumPRNG"
                     displayMode={displayMode}
                 />
+                <hr />
                 <ProjectCard 
                     projectTitle="P2P Mortgage Loans"
                     content="A prototype based project for P2P mortgage loan system based on smart mortgage contracts of ethereum blockchain network. Developed an interactive frontend for letting the borrowers/lenders to carry out transactions on blockchain. System uses web3 for making rpc calls to the blockchain network for carrying out the tranasctional logic. Check out github for additional information"
@@ -21,6 +22,7 @@ function Projects({ displayMode }) {
                     gitLink="https://github.com/robinsandhu/DoublePendulumPRNG"
                     displayMode={displayMode}
                 />
+                <hr />
                 <ProjectCard 
                     projectTitle="UDP Proxy"
                     content="A custom UDP proxy implemented in python for parsing network traffic of minetest game.
@@ -29,6 +31,7 @@ function Projects({ displayMode }) {
                     gitLink="https://github.com/robinsandhu/UDP-Proxy"
                     displayMode={displayMode}
                 />
+                <hr />
                 <ProjectCard 
                     projectTitle="Double Pendulum PRNG"
                     content="Implemented a paper(check github for link) for generating a Psuedo Random Number Generator using Double Pendulum (Dynamic Chaotic System). Also created a visualizer dashboard for visualizing the behaviour of the system under different initial settings."
@@ -36,10 +39,11 @@ function Projects({ displayMode }) {
                     gitLink="https://github.com/robinsandhu/DoublePendulumPRNG"
                     displayMode={displayMode}
                 />
+                <hr />
                 <ProjectCard 
                     projectTitle="ML Twitter Bot"
                     content="An ML Twitter bot for determining whether a twitter account is a bot or not."
-                    techStack="Python, "
+                    techStack="Python, Random Forest Classifier, Sklearn"
                     gitLink="https://github.com/robinsandhu/ML-Twitter-Bot"
                     displayMode={displayMode}
                 />

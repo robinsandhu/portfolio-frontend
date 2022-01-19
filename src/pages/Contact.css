@@ -20,13 +20,28 @@
     flex: 1;
 }
 
-.contact-div {
-    margin: 15px 0;
-}
-
 .contact-icons {
     display: flex;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.contact-container-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-div {
+    /* margin: 15px 0; */
+    /* justify-self: end; */
+}
+
+.contact-social {
+    flex: 0.3;
+}
+
+.contact-message {
+    flex: 0.7;
 }

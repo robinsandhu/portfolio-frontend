@@ -4,9 +4,9 @@ import "./Widgets.css"
 import LightModeIcon from '@mui/icons-material/LightMode'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import SpotifyCard from "./SpotifyCard";
-import { Link } from 'react-router-dom'
+import BlogCatalogue from './BlogCatalogue';
 
-function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMode }) {
+function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMode, mediumPosts }) {
     let style = {
         backgroundColor: "rgb(54, 57, 63)"
     }
@@ -19,7 +19,7 @@ function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMo
                     <Route path="/about" element={<React.Fragment />} />
                     <Route path="/projects" element={<React.Fragment />} />
                     <Route path="/blog" element={<React.Fragment />} />
-                    <Route path="/blog/:id" element={<React.Fragment />} />
+                    <Route path="/blog/:id" element={<BlogCatalogue mediumPosts={mediumPosts} displayMode={displayMode} />} />
                     <Route path="/contact" element={<React.Fragment />} />
                 </Routes>
             </div>

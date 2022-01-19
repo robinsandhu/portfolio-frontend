@@ -15,7 +15,21 @@ function Home({ displayMode }) {
                 </div>
                 <div className='home-content'>
                     <h5>
-                        Hi, I'm Robin Sandhu a beginner software developer. I enjoy building applications and learning about software development in general. I also have a huge interest in cyber security, so I like to try my hands in this field whenever I get a chance. This website is a small collection of my project work, work experience and blog posts. To know more about me check out the About page.
+                        Hi, I'm Robin Sandhu, 
+                        <br />
+                        <br />
+                        I'm a B.E. undergrad at Thapar Institute of Engineering and Technology, Patiala. I'm currently 
+                        working as a Dev/QE intern at VMWare. 
+                        <br />
+                        <br />
+                        Building applications and learning about software development in general are two of my favourite things to do.
+                        I also have a huge interest in cyber security, so I like to try my hands in this field whenever I get a chance. 
+                        <br />
+                        <br />
+                        This website is a small collection of my professional experience, project work, and blog posts.
+                        <br />
+                        <br />
+                        {/* To know more about me check out the About page. */}
                     </h5>
                 </div>
             </div>
