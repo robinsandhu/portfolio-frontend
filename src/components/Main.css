@@ -1,7 +1,5 @@
 .main {
     flex: 0.5;
-    border-right: var(--twitter-background) 1px solid;
-    border-left: var(--twitter-background) 1px solid;
     box-shadow: 0 10px 10px rgb(0, 0, 0, 0.6);
     min-width: 300px;
     overflow-y: scroll;

@@ -1,8 +1,8 @@
 .cataloguecard {
     display: flex;
     flex-direction: column;
-    max-height: 450px;
-    overflow: scroll;
+    max-height: 50vh;
+    overflow: auto;
     font-size: 0.9rem;
     font-family: 'Lora', serif;
     align-items: flex-start;
