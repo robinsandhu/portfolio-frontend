@@ -53,6 +53,16 @@ function BlogContent({ mediumPosts, mainRef, displayMode }) {
                 }
             }
 
+            const headRegExp = /<h4>.*<\/h4>/g
+            const headingMatches = result.matchAll(headRegExp)
+
+            let i=0
+            for(const match of headingMatches){
+                let temp = match[0]
+                result = result.replace(match[0], temp.substr(0, 3) + ` id='head_${i++}'` + temp.substr(3));
+                // console.log(temp.substr(0, 3) + " id='head_fsd'" + temp.substr(3));
+            }
+
             setParsedPost(result)
         }
 

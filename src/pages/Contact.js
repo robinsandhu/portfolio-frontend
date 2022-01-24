@@ -59,7 +59,7 @@ function Contact({ displayMode }) {
                                 </div>
                                 
                                 <div className="form-group">
-                                    <button className="nes-btn" disabled={isLoading}>Submit</button>
+                                    <button className="nes-btn" disabled={isLoading}>Send</button>
                                 </div>
                             </form>
                         </div>

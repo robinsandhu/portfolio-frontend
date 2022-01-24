@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './BlogCatalogue.css';
 
 function BlogCatalogue({ mediumPosts, displayMode }) {
@@ -32,7 +33,7 @@ function BlogCatalogue({ mediumPosts, displayMode }) {
             <div className="cataloguecard">
             {
                 catalogue.map((h, ind) => {
-                    return <p key={ind}>{h}</p>
+                    return <Link to={""} key={ind} style={displayMode ? {color: "white"} : {}}>{h}</Link>
                 })
             }
             </div>
