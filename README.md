@@ -2,7 +2,7 @@
 
 A Single Page Portfolio Website frontend coded in ReactJS
 
-<img src="screenshots/screenshot1.png" width="700"/>
+<img src="screenshots/screenshot1.png" width="800"/>
 
 ## Features:
 Fully reactive design that means it also works on mobile devices.
