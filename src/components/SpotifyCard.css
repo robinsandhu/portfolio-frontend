@@ -5,6 +5,12 @@
     font-size: 0.7rem;
 }
 
+.spotifycard a {
+    font-family: 'Lora', serif;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
 .spotifycard a:hover {
     font-weight: bolder;
 }

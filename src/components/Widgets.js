@@ -26,7 +26,7 @@ function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMo
             <div className="widgets--footer">
                 <div className={`nes-balloon from-right quote ${displayMode === true ? "is-dark" : ""}`}>
                     <div>
-                        <p>
+                        <p style={{fontFamily: "'Lora', serif", fontSize: "0.9em", fontWeight: "500"}}>
                             "{randomQuote && randomQuote.content}"
                         </p>
                         <p style={{textAlign: "end", fontSize: "0.6rem"}}>

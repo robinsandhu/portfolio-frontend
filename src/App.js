@@ -16,7 +16,7 @@ const feedUrl = "https://medium.com/feed/@robin-sandhu"
 function App() {
   const location = useLocation()
 
-  const [ displayMode, setDisplayMode ] = useState(true);
+  const [ displayMode, setDisplayMode ] = useState(false);
   const [ isSidebarOpen, setIsSidebarOpen ] = useState(false)
   const [ randomQuotes, setRandomQuotes ] = useState([])
   const [ mediumPosts, setMediumPosts ] = useState([])
@@ -31,7 +31,7 @@ function App() {
       if(darkModeInitVal)
         setDisplayMode(darkModeInitVal === 'true')
       axios.get("https://dry-crag-29825.herokuapp.com/api/songs/top-tracks").then(response => {
-          setMusicList(response.data.slice(0, 3))
+          setMusicList(response.data.slice(0, 4))
       })
   }, [])
 

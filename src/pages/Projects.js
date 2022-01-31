@@ -11,7 +11,7 @@ function Projects({ displayMode }) {
                     projectTitle="Portfolio Website"
                     content="A responsive portfolio website designed to work on both mobile phones and desktop for showcasing my project work and work experience."
                     techStack="ReactJS, ExpressJS, NodeJS, Heroku"
-                    gitLink="https://github.com/robinsandhu/DoublePendulumPRNG"
+                    gitLink="https://github.com/robinsandhu/portfolio-frontend.git"
                     displayMode={displayMode}
                 />
                 <hr />
@@ -19,7 +19,7 @@ function Projects({ displayMode }) {
                     projectTitle="P2P Mortgage Loans"
                     content="A prototype based project for P2P mortgage loan system based on smart mortgage contracts of ethereum blockchain network. Developed an interactive frontend for letting the borrowers/lenders to carry out transactions on blockchain. System uses web3 for making rpc calls to the blockchain network for carrying out the tranasctional logic. Check out github for additional information"
                     techStack="ReactJS, Solidity, TruffleJS, NodeJS, Pinata, Web3"
-                    gitLink="https://github.com/robinsandhu/DoublePendulumPRNG"
+                    gitLink="https://github.com/robinsandhu/p2p-mortgage.git"
                     displayMode={displayMode}
                 />
                 <hr />
