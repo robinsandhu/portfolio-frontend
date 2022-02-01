@@ -18,7 +18,7 @@ function ProjectCard({ projectTitle, content, techStack, gitLink, liveLink, disp
                             <div className='projectcard-content--footer'>
                             {
                                 liveLink ?
-                                <a href={liveLink} title="Live Link">
+                                <a target="_blank" href={liveLink} title="Live Link">
                                     <i className="nes-icon github "></i>
                                 </a>
                                 :
@@ -26,7 +26,7 @@ function ProjectCard({ projectTitle, content, techStack, gitLink, liveLink, disp
                             }
                             {
                                 gitLink ?
-                                <a href={gitLink} title="Github Link">
+                                <a target="_blank" href={gitLink} title="Github Link">
                                     <i className="nes-icon github "></i>
                                 </a>
                                 :
