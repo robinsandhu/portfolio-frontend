@@ -21,19 +21,19 @@ function Contact({ displayMode }) {
                         <div className={`nes-container with-title is-centered ${ displayMode ? "is-dark" : "" }`}>
                             <p className="title">Social Media</p>
                             <div className="contact-icons">
-                                <a target="_blank" href="https://twitter.com/rob6x9n">
+                                <a target="_blank" rel="noopener" href="https://twitter.com/rob6x9n">
                                     <i className="nes-icon twitter is-large"></i>
                                 </a>
-                                <a target="_blank" href="https://github.com/robinsandhu">
+                                <a target="_blank" rel="noopener" href="https://github.com/robinsandhu">
                                     <i className="nes-icon github is-large"></i>
                                 </a>
-                                <a target="_blank" href="mailto:er.robinsandhu@gmail.com">
+                                <a target="_blank" rel="noopener" href="mailto:er.robinsandhu@gmail.com">
                                     <i className="nes-icon gmail is-large"></i>
                                 </a>
-                                <a target="_blank" href="https://medium.com/@robin-sandhu">
+                                <a target="_blank" rel="noopener" href="https://medium.com/@robin-sandhu">
                                     <i className="nes-icon medium is-large"></i>
                                 </a>
-                                <a target="_blank" href="https://www.linkedin.com/in/robin-sandhu-b62010181/">
+                                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/robin-sandhu-b62010181/">
                                     <i className="nes-icon linkedin is-large"></i>
                                 </a>
                             </div>

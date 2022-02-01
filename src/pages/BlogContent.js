@@ -90,7 +90,7 @@ function BlogContent({ mediumPosts, mainRef, displayMode }) {
         <div className={`nes-container with-title blogcontainer ${ displayMode ? "is-dark" : "" }`}>
             <p className="title">
                 {mediumPosts.length && mediumPosts[id] && mediumPosts[id].title}
-                <a target="_blank" href={mediumPosts.length && mediumPosts[id] && mediumPosts[id].link}>
+                <a target="_blank" rel="noopener" href={mediumPosts.length && mediumPosts[id] && mediumPosts[id].link}>
                     <LinkIcon style={ displayMode ? {margin: "7px", color: "white"} : {margin: "7px"}} />
                 </a>
             </p>
