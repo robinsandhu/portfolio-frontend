@@ -23,7 +23,7 @@ function BlogCard({ item, index, displayMode }) {
                             <p className='blogcard--subject-pubdate'>{item.pubDate.split(" ")[0]}</p>
                         </div>
                         <div className='blogcard--image'>
-                            <img src={item.thumbnail} />
+                            <img src={item.thumbnail} alt="Blog Thumbnail"/>
                         </div>
                     </div>
                 </Link>

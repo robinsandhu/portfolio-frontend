@@ -44,9 +44,12 @@
     align-self: flex-end;
     margin-right: 10px;
 }
+
 .icon:hover {
-    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAA…BeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC");
+    cursor: url(https://unpkg.com/nes.css@latest/assets/cursor-click.png), auto;
+    /* cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAA…BeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC"); */
 }
+
 .icon {
     margin: 2px 0;
 }

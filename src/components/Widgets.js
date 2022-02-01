@@ -36,10 +36,10 @@ function Widgets({ toggleDisplayMode, randomQuote, mainRef, musicList, displayMo
                 </div>
                 <i className="nes-bcrikko head"></i>
                 <div>
-                    <a title="Back to Top"><KeyboardArrowUpIcon className="icon" style={displayMode === true ? { color:"white" } : {}} onClick={() => {mainRef.current.scrollTo({top: 0, left: 0, behavior: "smooth"})}}/></a>
+                    <KeyboardArrowUpIcon className="icon" style={displayMode === true ? { color:"white" } : {}} onClick={() => {mainRef.current.scrollTo({top: 0, left: 0, behavior: "smooth"})}}/>
                 </div>
                 <div>
-                    <a title="Toggle Dark Mode"><LightModeIcon className="icon" style={displayMode === true ? { color:"white" } : {}} onClick={toggleDisplayMode} /></a>
+                    <LightModeIcon className="icon" style={displayMode === true ? { color:"white" } : {}} onClick={toggleDisplayMode} />
                 </div>
             </div>
         </div>

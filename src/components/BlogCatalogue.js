@@ -25,7 +25,7 @@ function BlogCatalogue({ mediumPosts, displayMode }) {
             // console.log(result)
             setCatalogue(prevState => [...prevState, result])
         }
-    }, [ mediumPosts ]);
+    }, [ mediumPosts, id ]);
 
     return (
         <div className={`nes-container with-title is-centered ${displayMode ? "is-dark" : ""}`}>

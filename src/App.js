@@ -62,7 +62,7 @@ function App() {
       prevLocation.current = location.pathname
       setQuoteIndex(prevState => (prevState+1)%quoteCount)
     }
-  }, [location])
+  }, [location, randomQuotes])
 
   return (
     <React.Fragment>

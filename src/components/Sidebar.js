@@ -26,6 +26,9 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen, displayMode }) {
             case "contact":
                 index = 4
                 break;
+            default:
+                index = -1
+                break;
         }
         if(index !== -1){
             let newList = [false, false, false, false, false]
