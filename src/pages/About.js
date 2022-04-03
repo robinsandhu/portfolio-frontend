@@ -19,6 +19,13 @@ function About({ displayMode }) {
                             Experience
                         </h3>
                         <div className='about-section-content'>
+                            <h5>VMWare - Dev/QE Intern <span className='time-span'>Jan. 2022 - present</span></h5>
+                            <ul>
+                                <li>Collated all the important networking endpoints for the Dimension SDDC Rack.</li>
+                                <li>Working on a python module for validating the networking endpoints on Day 0 bring-up operations.</li>
+                            </ul>
+                        </div>
+                        <div className='about-section-content'>
                             <h5>ZScaler - Dev Intern <span className='time-span'>June 2021 - Sep 2021</span></h5>
                             <ul>
                                 <li>Wrote Rest API endpoints in JAVA Jersey framework for implementing the functionality of the features.</li>
@@ -75,7 +82,7 @@ function About({ displayMode }) {
                             <p>- Linux, Git, Docker</p>
                         </div>
                     </div>
-                    <a href="/files/Robin_Resume.pdf" download={true}><button className='nes-btn'>Download Resume</button></a>
+                    <a href="https://drive.google.com/file/d/1Wpooow9IEmoHxA4rhv-Lz63dxRj0_8IS/view?usp=sharing" target="_blank" rel="noreferrer"><button className='nes-btn'>View Resume</button></a>
                 </div>
             </div>
         </div>
