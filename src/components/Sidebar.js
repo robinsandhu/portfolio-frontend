@@ -61,7 +61,7 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen, displayMode }) {
     return (
         <div className="sidebar" style={isSidebarOpen ? {...style, width: "266px"} : {...style}}>
             <Link to="/" style={linkStyle} onClick={() => {handleClick(0)}}>
-                <SidebarOption text="Robin Sandhu" handle="@rob6x9n" active={activeList[0]} />
+                <SidebarOption text="Robin Sandhu" handle="@rrobin_sandhu" active={activeList[0]} />
             </Link>
             <Link to="/about" style={linkStyle} onClick={() => {handleClick(1)}}>
                 <SidebarOption text="About" active={activeList[1]} />
