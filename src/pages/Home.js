@@ -23,7 +23,7 @@ function Home({ displayMode }) {
                         <br />
                         <br />
                         Building applications and learning about software development in general are two of my favourite things to do.
-                        I also have a huge interest in cyber security, so I like to try my hands in this field whenever I get a chance. 
+                        I also love solving DSA problems by the side. 
                         <br />
                         <br />
                         This website is a small collection of my professional experience, project work, and blog posts.

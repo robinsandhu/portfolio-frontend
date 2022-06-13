@@ -23,7 +23,7 @@ function Contact({ displayMode }) {
                         <div className={`nes-container with-title is-centered ${ displayMode ? "is-dark" : "" }`}>
                             <p className="title">Social Media</p>
                             <div className="contact-icons">
-                                <a target="_blank" rel="noreferrer" href="https://twitter.com/rob6x9n">
+                                <a target="_blank" rel="noreferrer" href="https://twitter.com/rrobin_sandhu">
                                     <i className="nes-icon twitter is-large"></i>
                                 </a>
                                 <a target="_blank" rel="noreferrer" href="https://github.com/robinsandhu">
@@ -41,7 +41,7 @@ function Contact({ displayMode }) {
                             </div>
                         </div>
                     </div>
-                    <div className='contact-div contact-message'>
+                    {/* <div className='contact-div contact-message'>
                         <div className={`nes-container with-title is-centered contact-div ${ displayMode ? "is-dark" : "" }`}>
                             <p className='title'>Message Me</p>
                             <form onSubmit={handleSubmit}>
@@ -65,7 +65,7 @@ function Contact({ displayMode }) {
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
