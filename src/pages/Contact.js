@@ -19,6 +19,9 @@ function Contact({ displayMode }) {
             <div className={`nes-container with-title contact-container ${ displayMode ? "is-dark" : "" }`}>
                 <p className="title">Contact Me</p>
                 <div className="contact-container-group">
+                    <div>
+                        <img style={{width: "100%", borderRadius: "5px"}} src="/images/contact.jpg"></img>
+                    </div>
                     <div className='contact-div contact-social'>
                         <div className={`nes-container with-title is-centered ${ displayMode ? "is-dark" : "" }`}>
                             <p className="title">Social Media</p>

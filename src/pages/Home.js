@@ -18,8 +18,8 @@ function Home({ displayMode }) {
                         Hi, I'm Robin Sandhu, 
                         <br />
                         <br />
-                        I'm a B.E. undergrad at Thapar Institute of Engineering and Technology, Patiala. I'm currently 
-                        working as a Dev/QE intern at VMWare. 
+                        I have done my undergrad from Thapar Institute of Engineering and Technology in Computer Engineering. Currently I'm 
+                        working as a Member of Technical Staff at VMWare. 
                         <br />
                         <br />
                         Building applications and learning about software development in general are two of my favourite things to do.
