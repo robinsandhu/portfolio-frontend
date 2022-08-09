@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Contact.css'
 
 function Contact({ displayMode }) {
-    const [ name, setName ] = useState("")
-    const [ email, setEmail ] = useState("")
-    const [ message, setMessage ] = useState("")
-    const [ isLoading, setIsLoading ] = useState(false)
+    // const [ name, setName ] = useState("")
+    // const [ email, setEmail ] = useState("")
+    // const [ message, setMessage ] = useState("")
+    // const [ isLoading, setIsLoading ] = useState(false)
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        // add code here
-        setIsLoading(true)
-        setIsLoading(false)
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     // add code here
+    //     setIsLoading(true)
+    //     setIsLoading(false)
+    // }
 
     return (
         <div className="contact">
@@ -20,7 +20,7 @@ function Contact({ displayMode }) {
                 <p className="title">Contact Me</p>
                 <div className="contact-container-group">
                     <div>
-                        <img style={{width: "100%", borderRadius: "5px"}} src="/images/contact.jpg"></img>
+                        <img alt="contact" style={{width: "100%", borderRadius: "5px"}} src="/images/contact.jpg"></img>
                     </div>
                     <div className='contact-div contact-social'>
                         <div className={`nes-container with-title is-centered ${ displayMode ? "is-dark" : "" }`}>
