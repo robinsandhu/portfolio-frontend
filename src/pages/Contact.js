@@ -24,7 +24,7 @@ function Contact({ displayMode }) {
                     </div>
                     <div className='contact-div contact-social'>
                         <div className={`nes-container with-title is-centered ${ displayMode ? "is-dark" : "" }`}>
-                            <p className="title">Social Media</p>
+                            <p className="title">Socials</p>
                             <div className="contact-icons">
                                 <a target="_blank" rel="noreferrer" href="https://twitter.com/rrobin_sandhu">
                                     <i className="nes-icon twitter is-large"></i>
