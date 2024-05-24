@@ -22,7 +22,6 @@ function BlogCatalogue({ mediumPosts, displayMode }) {
 
             const regex = /(<([^>]+)>)/g
             const result = text.replace(regex, '');
-            // console.log(result)
             setCatalogue(prevState => [...prevState, result])
         }
     }, [ mediumPosts, id ]);

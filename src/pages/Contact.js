@@ -62,7 +62,7 @@ function Contact({ displayMode }) {
                                     <label htmlFor="message">Your Message</label>
                                     <textarea rows="8" type="text" id="message" value={message} onChange={e => setMessage(e.target.value)} className={`nes-input ${ displayMode ? "is-dark" : "" }`} placeholder="Please enter your message" required/>
                                 </div>
-                                
+
                                 <div className="form-group">
                                     <button className="nes-btn" disabled={isLoading}>Send</button>
                                 </div>

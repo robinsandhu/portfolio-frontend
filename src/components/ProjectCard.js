@@ -11,7 +11,7 @@ function ProjectCard({ projectTitle, content, techStack, gitLink, liveLink, disp
                         {content}
                     </p>
                     <p>
-                        <b>Tech Stack:</b> {techStack} 
+                        <b>Tech Stack:</b> {techStack}
                     </p>
                     {
                         (gitLink || liveLink) ?

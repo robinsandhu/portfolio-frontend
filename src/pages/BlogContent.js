@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import Gist from 'react-gist'
+import GithubGistComponent from '../components/GithubGistComponent.js'
 import ReactDOM from 'react-dom';
 import './BlogContent.css'
 import LinkIcon from '@mui/icons-material/Link';
@@ -32,7 +32,7 @@ function BlogContent({ mediumPosts, mainRef, displayMode }) {
             const text = mediumPosts[id].content
             const gistLinkMatches = text.matchAll(gistLinkRegExp)
             let result = text
-    
+
             let id_val = 0;
             for(const match of gistLinkMatches){
                 mediumGistRedirectUrl.current.push(text.substring(match.index+9, match.index + 71))
@@ -60,7 +60,6 @@ function BlogContent({ mediumPosts, mainRef, displayMode }) {
             for(const match of headingMatches){
                 let temp = match[0]
                 result = result.replace(match[0], temp.substr(0, 3) + ` id='head_${i++}'` + temp.substr(3));
-                // console.log(temp.substr(0, 3) + " id='head_fsd'" + temp.substr(3));
             }
 
             setParsedPost(result)
@@ -75,8 +74,7 @@ function BlogContent({ mediumPosts, mainRef, displayMode }) {
         // add gists to blog
         mediumGistRedirectUrl.current.map(async (redirectUrl, index) => {
             const gistId = await getGistId(redirectUrl)
-            // console.log(gistId, `gist_mount_${index}`)
-            ReactDOM.render(<Gist id={gistId} />, document.getElementById(`gist_mount_${index}`))
+            ReactDOM.render(<GithubGistComponent gistId={gistId} />, document.getElementById(`gist_mount_${index}`))
         })
 
         // add tweets to blog
@@ -104,9 +102,9 @@ function BlogContent({ mediumPosts, mainRef, displayMode }) {
                             id-1 > -1 ?
                             <>
                                 <p>Next</p>
-                                <Link to={`/blog/${id-1}`}>{mediumPosts.length && mediumPosts[id] && mediumPosts[id-1].title}</Link> 
+                                <Link to={`/blog/${id-1}`}>{mediumPosts.length && mediumPosts[id] && mediumPosts[id-1].title}</Link>
                             </>
-                            : 
+                            :
                             <>
                                 <p>Next</p>
                                 <p>No newer posts</p>
@@ -115,12 +113,12 @@ function BlogContent({ mediumPosts, mainRef, displayMode }) {
                     </div>
                     <div className='blogcontent--footer-right'>
                         {
-                            id+1 < mediumPosts.length ? 
+                            id+1 < mediumPosts.length ?
                             <>
                                 <p>Prev</p>
-                                <Link to={`/blog/${id+1}`}>{mediumPosts.length && mediumPosts[id] && mediumPosts[id+1].title}</Link> 
+                                <Link to={`/blog/${id+1}`}>{mediumPosts.length && mediumPosts[id] && mediumPosts[id+1].title}</Link>
                             </>
-                            : 
+                            :
                             <>
                                 <p>Prev</p>
                                 <p>No previous posts</p>

@@ -5,7 +5,7 @@ import SidebarOption from "./SidebarOption";
 
 function Sidebar({ isSidebarOpen, setIsSidebarOpen, displayMode }) {
     const [ activeList, setActiveList ] = useState([false, false, false, false, false])
-    
+
     useEffect(() => {
         let pathName = window.location.pathname
         const uri = pathName.substring(1, pathName.length).toLowerCase()

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Home.css'
 
 function Home({ displayMode }) {
-    const [ imgWidth, setImgWidth ] = useState("320px")    
+    const [ imgWidth, setImgWidth ] = useState("320px")
     useEffect(() => {
         setImgWidth("266px")
     }, [])
@@ -15,15 +15,15 @@ function Home({ displayMode }) {
                 </div>
                 <div className='home-content'>
                     <h5>
-                        Hi, I'm Robin Sandhu, 
+                        Hi, I'm Robin Sandhu,
                         <br />
                         <br />
-                        I have done my undergrad from Thapar Institute of Engineering and Technology in Computer Engineering. Currently I'm 
-                        working as a Member of Technical Staff at VMWare. 
+                        I have done my undergrad from Thapar Institute of Engineering and Technology in Computer Engineering. Currently I'm
+                        working as a Member of Technical Staff at VMWare.
                         <br />
                         <br />
                         Building applications and learning about software development in general are two of my favourite things to do.
-                        I also love solving DSA problems by the side. 
+                        I also love solving DSA problems by the side.
                         <br />
                         <br />
                         This website is a small collection of my professional experience, project work, and blog posts.

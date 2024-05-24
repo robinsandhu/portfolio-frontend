@@ -22,10 +22,10 @@ function App() {
   const [ mediumPosts, setMediumPosts ] = useState([])
   const [ musicList, setMusicList ] = useState([])
   const [ quoteIndex, setQuoteIndex ] = useState(0)
-  
+
   const mainRef = useRef()
   const prevLocation = useRef("");
-  
+
   useEffect(() => {
       const darkModeInitVal = Cookies.get('dark');
       if(darkModeInitVal)
